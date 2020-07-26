@@ -11,4 +11,6 @@ This quote inspires me to be creative, explore all my ideas as wild or stupid as
 
 > Fail fast, learn fast. Fail lots, learn lots.
 
+> Do not be scared of dying, be scared of not living.
 
+> 
