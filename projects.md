@@ -4,4 +4,4 @@ title: Projects
 description: projects i am involved in
 ---
 
-Hi
+All the cool projects I've seen myself in
