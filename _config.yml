@@ -42,7 +42,7 @@ footer:
       url: "https://linkedin.com/in/lucha6"
 
 # Build settings
-theme: minimal-mistakes-jekyll
+remote_theme: mmistakes/minimal-mistakes
 minimal_mistakes_skin    : "aqua" #"default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 plugins:
   - jekyll-include-cache
