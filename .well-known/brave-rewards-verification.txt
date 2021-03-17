@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: luischaves.xyz
+Token: 6d3f998d5ad6aaddb6dbe7982a8f0bdd73ec2204526bfbafd1ac9eb608e463b4
