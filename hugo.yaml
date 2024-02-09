@@ -2,3 +2,36 @@ baseURL: https://luischav.es/
 languageCode: en-us
 title: Luis Chaves Rodriguez
 theme: ["PaperMod"]
+
+# menu:
+#   - name: Archive
+#     url: archives
+#     weight: 2
+
+params:
+  title: Luis Chaves Rodriguez
+  description: "Welcome to Luis's home in the internet. A space to share my thoughts and gold nuggetts from my browsing of the internet"
+  author: Luis Chaves Rodriguez
+  # the date format has to be this particular date
+  # which is Go's reference time, much like the famous UNIX timestamp
+  DateFormat: "January 2, 2006"
+  hideAuthor: true
+  disableThemeToggle: false
+
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowWordCount: true
+  ShowAllPagesInArchive: true
+
+
+  homeInfoParams:
+    Title: Hi :)
+    Content: Welcome to Luis's home in the internet. A space to share my thoughts and gold nuggets that I find browsing the internet
+
+  socialIcons:
+    - name: github
+      url: "https://github.com/lucharo"
+    - name: substack
+      url: "https://lucharo.substack.com"
+    - name: medium
+      url: "https://medium.com/@lucharo"
