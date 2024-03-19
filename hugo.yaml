@@ -3,11 +3,20 @@ languageCode: en-us
 title: Luis Chaves Rodriguez
 theme: ["PaperMod"]
 
-# menu:
-#   - name: Archive
-#     url: archives
-#     weight: 2
-
+menu:
+  main:
+    - name: Home
+      pageRef: /
+      weight: 1
+    - name: Resources I have enjoyed
+      pageRef: /resources
+      weight: 2
+    - name: About
+      pageRef: /about
+      weight: 3
+    - name: Projects
+      pageRef: /projects
+      weight: 4
 params:
   title: Luis Chaves Rodriguez
   description: "Welcome to Luis's home in the internet. A space to share my thoughts and gold nuggetts from my browsing of the internet"
@@ -19,7 +28,7 @@ params:
   disableThemeToggle: false
 
   ShowReadingTime: true
-  ShowShareButtons: true
+  ShowShareButtons: false
   ShowWordCount: true
   ShowAllPagesInArchive: true
 
