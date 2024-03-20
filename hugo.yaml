@@ -1,41 +1,43 @@
 baseURL: https://luischav.es/
 languageCode: en-us
 title: Luis Chaves Rodriguez
-theme: ["PaperMod"]
+theme: ["hugo-prose"]
 
 menu:
-  main:
-    - name: Home
-      pageRef: /
+  header:
+    - name: About
+      url: "/about"
       weight: 1
     - name: Resources I have enjoyed
-      pageRef: /resources
+      url: "/resources"
       weight: 2
-    - name: About
-      pageRef: /about
+    - name: Search
+      url: "#"
       weight: 3
-    - name: Projects
-      pageRef: /projects
+      identifier: menu-search
+  footer:
+    - name: Contact
+      url: "404.html"
+      weight: 1
+    - name: Categories
+      url: "categories/"
+      weight: 2
+      pre: "optional"
+    - name: Tags
+      url: "tags/"
+      weight: 3
+      pre: "optional"
+    - name: Suggest an edit
+      url: "#"
       weight: 4
+      identifier: "menu-edit"
+    - name: Back to top
+      url: "#"
+
 params:
   title: Luis Chaves Rodriguez
-  description: "Welcome to Luis's home in the internet. A space to share my thoughts and gold nuggetts from my browsing of the internet"
-  author: Luis Chaves Rodriguez
-  # the date format has to be this particular date
-  # which is Go's reference time, much like the famous UNIX timestamp
-  DateFormat: "January 2, 2006"
-  hideAuthor: true
-  disableThemeToggle: false
-
-  ShowReadingTime: true
-  ShowShareButtons: false
-  ShowWordCount: true
-  ShowAllPagesInArchive: true
-
-
-  homeInfoParams:
-    Title: Hi :)
-    Content: Welcome to Luis's home in the internet. A space to share my thoughts and gold nuggets that I find browsing the internet
+  homePosts: 5
+  mainSections: ["posts"]
 
   socialIcons:
     - name: github
