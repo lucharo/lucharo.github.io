@@ -11,10 +11,6 @@ menu:
     - name: Resources I have enjoyed
       url: "/resources"
       weight: 2
-    - name: Search
-      url: "#"
-      weight: 3
-      identifier: menu-search
   footer:
     - name: Contact
       url: "404.html"
@@ -27,10 +23,6 @@ menu:
       url: "tags/"
       weight: 3
       pre: "optional"
-    - name: Suggest an edit
-      url: "#"
-      weight: 4
-      identifier: "menu-edit"
     - name: Back to top
       url: "#"
 
