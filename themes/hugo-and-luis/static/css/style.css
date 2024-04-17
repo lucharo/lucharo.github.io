@@ -51,13 +51,6 @@ h3.date {
   background: linear-gradient(to left, purple, white);
 }
 
-/* hr {
-  border: 0;
-  margin: 0; */
-  /*above we override the defaults*/
-  /* border-top: 1px solid red;
-} */
-
 hr {
   border: 0;
   margin: 0;
@@ -74,8 +67,8 @@ hr {
   }
   
   .site-nav a {
-    display: block;
-    /**/
+    display: flex;
+    justify-content: flex-end;
     color: white;
     /*make it look like a button with rectangular pill shape*/
     padding: 0.1em 0.4em;
@@ -96,6 +89,7 @@ hr {
     padding-left: 1%;
     /*logo different colour*/
     color: purple;
+    justify-content: flex-start;
     
   }
   
