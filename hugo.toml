@@ -1,3 +1,24 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://luischav.es/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'Luis Chaves Rodriguez'
+theme = 'hugo-and-luis'
+
+[[menus.main]]
+name = 'Posts'
+pageRef = '/posts'
+weight = 2
+
+[[menus.main]]
+name = 'Notes'
+pageRef = '/notes'
+weight = 3
+
+[[menus.main]]
+name = 'Tags'
+pageRef = '/tags'
+weight = 10
+
+[[menus.main]]
+name = 'About'
+pageRef = '/about'
+weight = 20
