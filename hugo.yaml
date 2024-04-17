@@ -8,6 +8,12 @@ menu:
     - name: About
       url: "/about"
       weight: 1
+    - name: Posts
+      url: "/posts"
+      weight: 1
+    - name: Notes
+      url: "/notes"
+      weight: 2
     - name: Resources I have enjoyed
       url: "/resources"
       weight: 2
@@ -30,11 +36,4 @@ params:
   title: Luis Chaves Rodriguez
   homePosts: 5
   mainSections: ["posts", "notes"]
-
-  socialIcons:
-    - name: github
-      url: "https://github.com/lucharo"
-    - name: substack
-      url: "https://lucharo.substack.com"
-    - name: medium
-      url: "https://medium.com/@lucharo"
+  stickyMenu: true
