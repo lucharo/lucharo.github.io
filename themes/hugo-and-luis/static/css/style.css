@@ -1,6 +1,7 @@
 /* LAYOUT */
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
@@ -14,13 +15,14 @@ body {
   display: flex;
   flex-direction: column;
 }
-  
+
 .content {
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   margin-bottom: 2rem;
+  transition: margin-top 0.5s ease-in-out;
 }
 
 /* margins in paragraphs (p) default above*/
@@ -31,7 +33,8 @@ p {
 }
 
 #footer {
-  margin-top: 2rem; /* space footer down a bit */
+  margin-top: 2rem;
+  /* space footer down a bit */
 }
 
 h1 {
@@ -47,77 +50,130 @@ h3.date {
 
 /* COLORS */
 
-.site-nav, footer {
+.site-nav,
+footer {
   background: linear-gradient(to left, purple, white);
 }
 
 hr {
   border: 0;
   margin: 0;
-  /*above we reset the defaults, otherwise hr wouldn't show*/  
+  /*above we reset the defaults, otherwise hr wouldn't show*/
   height: 1px;
   background-image: linear-gradient(to left, purple, white);
 }
-  
-  /* NAVIGATION */
-  
-  .site-nav {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .site-nav a {
-    display: flex;
-    justify-content: flex-end;
-    color: white;
-    /*make it look like a button with rectangular pill shape*/
-    padding: 0.1em 0.4em;
-    margin: 0.5em 0;
-    border: 1px solid none; 
-    border-radius: 10px;  
-    /*remove underlines*/
-    text-decoration: none;
+
+/* NAVIGATION */
+
+.site-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.site-nav a {
+  display: flex;
+  justify-content: flex-end;
+  color: white;
+  /*make it look like a button with rectangular pill shape*/
+  padding: 0.1em 0.4em;
+  margin: 0.1em 0;
+  border: 1px solid none;
+  border-radius: 10px;
+  /*remove underlines*/
+  text-decoration: none;
+}
+
+.site-nav a:hover {
+  background: rgba(200, 180, 220, 0.5);
+  color: purple
+}
+
+.site-nav .logo {
+  font-weight: bold;
+  padding-left: 1%;
+  /*logo different colour*/
+  color: purple;
+  justify-content: flex-start;
+
+}
+
+.main-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: center;
+  width: 30px;
+  height: 21px;
+  cursor: pointer;
+  border-radius: 10px;
+  padding-right: 1rem;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  transition: all 0.5s ease-in-out;
+}
+
+.menu-toggle.active span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+/* SMALL SCREENS / MOBILE */
+
+@media screen and (max-width: 600px) {
+
+  .main-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: calc(100% - 2rem);
+    margin: 0;
+    background: linear-gradient(to left, purple, white);
+    padding: 1rem;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s ease-in-out;
   }
 
-  .site-nav a:hover {
-    background: rgba(200, 180, 220, 0.5);
-    color: purple
-  }
-  
-  .site-nav .logo {
-    font-weight: bold;
-    padding-left: 1%;
-    /*logo different colour*/
-    color: purple;
-    justify-content: flex-start;
-    
-  }
-  
-  .main-menu {
+  .main-menu.active {
     display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    transform: scaleY(1);
   }
-  
-  @media screen and (max-width: 600px) {
-    .site-nav,
-    .main-menu {
-      flex-direction: column;
-    }
-  
-    .site-nav a {
-      padding: 0.5rem;
-      padding-left: 0;
-    }
+
+
+  .menu-toggle {
+    display: flex;
   }
-  
-  /* LISTS */
-  
-  .post-snippet {
-    margin-bottom: 1rem;
-  }
-  
-  .post-snippet h3 {
-    margin-bottom: 0.25rem;
-  }
+}
+
+/* LISTS */
+
+.post-snippet {
+  margin-bottom: 1rem;
+}
+
+.post-snippet h3 {
+  margin-bottom: 0.25rem;
+}
