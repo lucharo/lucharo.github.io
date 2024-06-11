@@ -16,6 +16,8 @@
 	<time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
 		{{ .Date.Format "January 2, 2006" }}
 	</time>
+  <span>• {{ .WordCount }} words</span>
+  <span>• {{ .ReadingTime }} mins</span>
 </article>
 {{ end }}
 
