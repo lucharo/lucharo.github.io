@@ -3,7 +3,12 @@
 <h1>{{ .Title }}</h1>
 
 
-<h3 class="date">{{ .Date.Format "January 2, 2006" }}</h3>
+<h3 class="date">
+    {{ .Date.Format "January 2, 2006" }}
+    <span style="font-weight: normal;">
+        • {{ .WordCount }} words • {{ .ReadingTime }} mins
+    </span>
+</h3>
 <p class="terms">
 {{ range $i := (slice "tags") }}
 {{ with ($.Param $i) }}

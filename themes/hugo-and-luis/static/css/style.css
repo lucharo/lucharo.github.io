@@ -9,11 +9,12 @@ body {
   color: #333;
   font-size: 125%;
   line-height: 1.5;
-  max-width: 45rem;
+  max-width: 42rem;
   padding: 1rem;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  text-align: justify;
 }
 
 .content {
@@ -61,6 +62,19 @@ hr {
   /*above we reset the defaults, otherwise hr wouldn't show*/
   height: 1px;
   background-image: linear-gradient(to left, purple, white);
+}
+
+blockquote {
+  background-color: rgba(128, 0, 128, 0.1);
+  border-left: 4px solid purple;
+  margin: 1em 0;
+  padding: 0.5em 10px;
+  font-style: italic;
+  color: #444;
+}
+
+blockquote p {
+  display: inline;
 }
 
 /* NAVIGATION */
