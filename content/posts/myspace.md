@@ -5,8 +5,6 @@ tags: ["digital ownership", "social media", "attention"]
 showToc: true
 draft: false
 ---
-
-
 > What is a digital home? Isn't this just a blog?
 
 Earlier this year, I decided I wanted to invest my time in developing my own website. My main goal is writing and sharing long-form content with friends, family, and strangers on the internet.
