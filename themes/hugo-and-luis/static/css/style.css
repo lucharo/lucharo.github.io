@@ -49,6 +49,17 @@ h3.date {
   font-weight: bold;
 }
 
+[title] {
+  cursor: help;
+  border-bottom: 1px dotted #888;
+}
+
+[title]:hover::before {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.1s;
+}
+
 /* COLORS */
 
 .site-nav,

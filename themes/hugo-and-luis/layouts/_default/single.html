@@ -5,8 +5,12 @@
 
 <h3 class="date">
     {{ .Date.Format "January 2, 2006" }}
+    {{ $readingPagesTime := div (float .WordCount) 318 }}
     <span style="font-weight: normal;">
-        • {{ .WordCount }} words • {{ .ReadingTime }} mins
+        • {{ .WordCount }} words 
+        • <span title="HP Series has 1,084,170 words across 3407 pages, 318 words per page">
+            {{ printf "%.1f" $readingPagesTime }} Harry Potter pages</span>
+        • {{ .ReadingTime }} mins 
     </span>
 </h3>
 <p class="terms">
