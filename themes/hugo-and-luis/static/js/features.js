@@ -1,35 +1,31 @@
-const menuToggle = document.querySelector('.menu-toggle');
-const mainMenu = document.querySelector('.main-menu');
-
-menuToggle.addEventListener('click', () => {
-  menuToggle.classList.toggle('active');
-  mainMenu.classList.toggle('active');
-});
-
-<script>
 document.addEventListener('DOMContentLoaded', function() {
+  const menuToggle = document.querySelector('.menu-toggle');
+  const mainMenu = document.querySelector('.main-menu');
+  const isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0;
+
+  // Menu toggle functionality
+  menuToggle.addEventListener('click', () => {
+    menuToggle.classList.toggle('active');
+    mainMenu.classList.toggle('active');
+  });
+
+  // Tooltip functionality
   document.addEventListener('click', function(e) {
-    var trigger = e.target.closest('.tooltip-trigger');
-    if (trigger) {
-      var content = trigger.nextElementSibling;
+    const trigger = e.target.closest('.tooltip-trigger');
+    if (trigger && isTouch) {
+      e.preventDefault();
+      const content = trigger.nextElementSibling;
       content.classList.toggle('active');
     } else if (!e.target.closest('.tooltip-content')) {
-      document.querySelectorAll('.tooltip-content.active').forEach(function(tooltip) {
-        tooltip.classList.remove('active');
-      });
+      document.querySelectorAll('.tooltip-content.active').forEach(tooltip => tooltip.classList.remove('active'));
     }
   });
 
-  // Optional: Add this if you want to ensure hover works even on devices that don't support the hover media query
-  if (!window.matchMedia("(hover: hover)").matches) {
-    document.querySelectorAll('.tooltip-wrapper').forEach(function(wrapper) {
-      wrapper.addEventListener('mouseenter', function() {
-        this.querySelector('.tooltip-content').classList.add('active');
-      });
-      wrapper.addEventListener('mouseleave', function() {
-        this.querySelector('.tooltip-content').classList.remove('active');
-      });
+  // Fallback for non-touch devices that don't support hover media query
+  if (!isTouch) {
+    document.querySelectorAll('.tooltip-wrapper').forEach(wrapper => {
+      wrapper.addEventListener('mouseenter', () => wrapper.querySelector('.tooltip-content').classList.add('active'));
+      wrapper.addEventListener('mouseleave', () => wrapper.querySelector('.tooltip-content').classList.remove('active'));
     });
   }
 });
-</script>
