@@ -18,8 +18,10 @@
 	</time>
   {{ $readingPagesTime := div (float .WordCount) 318 }}
   • <span>{{ .WordCount }} words</span>
-  • <span title="HP Series has 1,084,170 words across 3407 pages, 318 words per page">
-    {{ printf "%.1f" $readingPagesTime }} Harry Potter pages</span>
+  • <span class="tooltip-wrapper">
+      <span class="tooltip-trigger">{{ printf "%.1f" $readingPagesTime }} Harry Potter pages</span>
+      <span class="tooltip-content">HP Series has 1,084,170 words across 3407 pages, 318 words per page <a href="https://gist.github.com/lucharo/f3a0cf2cb220ca2a5ecfabcf9452e246" target="_blank" rel="noopener noreferrer">(reference)</a>.</span>
+  </span>
   • <span>{{ .ReadingTime }} mins</span>
 </article>
 {{ end }}
