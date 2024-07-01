@@ -33,7 +33,7 @@
         <a href="{{ .Params.source }}" class="note-title" target="_blank" rel="noopener noreferrer">{{ .Title }}</a> - {{ .Params.author }} ({{ .Params.source | urls.Parse | replaceRE "^https?://(www\\.)?([^/]+).*" "$2"}})
       </div>
       <div id="note-{{ .File.UniqueID }}" class="note-description hidden">
-        {{ .Content }}
+        <a href="{{ .RelPermalink }}" target="_blank" rel="noopener noreferrer">(Read in new tab)</a>{{ .Content }}
       </div>
     </div>
   </div>
