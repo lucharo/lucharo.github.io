@@ -1,0 +1,44 @@
+{{ partial "header.html" . }}
+
+<h1>{{ .Title }}</h1>
+
+<p>{{ .Description | safeHTML }}</p>
+
+<hr>
+
+{{ .Content }}
+
+{{ $pages := .Pages.ByDate.Reverse }}
+{{ $currentYear := 0 }}
+
+<div class="notes-list">
+  {{ range $pages }}
+  {{ $year := .Date.Format "2006" }}
+  {{ if ne $year $currentYear }}
+  {{ if ne $currentYear 0 }}
+</div>
+{{ end }}
+<h2 class="year-heading">{{ $year }}</h2>
+<div class="year-entries">
+  {{ $currentYear = $year }}
+  {{ end }}
+  <div class="note-entry">
+    <span class="note-date">{{ .Date.Format "Jan 2" }}</span>
+    <div class="note-content">
+      <div class="note-header">
+        <button class="note-expand-btn" aria-expanded="false" aria-controls="note-{{ .File.UniqueID }}">
+          <span class="sr-only">Expand note</span>
+          <span aria-hidden="true">▶</span>
+        </button>
+        <a href="{{ .Params.source }}" class="note-title" target="_blank" rel="noopener noreferrer">{{ .Title }}</a> - {{ .Params.author }} ({{ .Params.source | urls.Parse | replaceRE "^https?://(www\\.)?([^/]+).*" "$2"}})
+      </div>
+      <div id="note-{{ .File.UniqueID }}" class="note-description hidden">
+        {{ .Content }}
+      </div>
+    </div>
+  </div>
+  {{ end }}
+</div>
+</div>
+
+{{ partial "footer.html" . }}

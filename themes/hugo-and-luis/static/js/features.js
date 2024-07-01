@@ -28,4 +28,27 @@ document.addEventListener('DOMContentLoaded', function() {
       wrapper.addEventListener('mouseleave', () => wrapper.querySelector('.tooltip-content').classList.remove('active'));
     });
   }
+
+  // Expandable notes functionality using event delegation
+  document.querySelector('.notes-list').addEventListener('click', (e) => {
+    const button = e.target.closest('.note-expand-btn');
+    if (button) {
+      e.preventDefault();
+      const noteDescription = button.closest('.note-content').querySelector('.note-description');
+      const isExpanded = button.getAttribute('aria-expanded') === 'true';
+      
+      noteDescription.classList.toggle('expanded');
+      button.setAttribute('aria-expanded', !isExpanded);
+      button.querySelector('[aria-hidden]').textContent = isExpanded ? '▶' : '▼';
+    }
+  });
+
+  // Close expanded notes when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.note-entry')) {
+      document.querySelectorAll('.note-expand-btn[aria-expanded="true"]').forEach(button => {
+        button.click();
+      });
+    }
+  });
 });
