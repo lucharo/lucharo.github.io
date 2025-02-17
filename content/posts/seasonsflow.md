@@ -37,7 +37,8 @@ be right. But the thing is, this year is the first time I accept that it's ok to
 not want to leave the house when it's cold and dark outside. That it's ok to
 rest, to use this season for some emotional recycling, to ground myself in
 quality sleep, cooking hearty meals, working on the things I am currently
-working on which do require a lot of sitting down in the quiet. The sun will
+working on which do require a lot of sitting down in the quiet.
+Winter reminds me that it's ok for things to take time, it's ok to go slowly. The sun will
 inevitably come back, the warm long days, going out for hours on end, enjoying
 endless hours chatting & laughing with friends. For now, I rest.
 
