@@ -26,8 +26,6 @@ body {
   transition: margin-top 0.5s ease-in-out;
 }
 
-/* margins in paragraphs (p) default above*/
-
 p {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
@@ -35,7 +33,6 @@ p {
 
 #footer {
   margin-top: 2rem;
-  /* space footer down a bit */
 }
 
 h1 {
@@ -49,7 +46,98 @@ h3.date {
   font-weight: bold;
 }
 
-/* tooltip  *//* tooltip  */
+/* NOTES LIST */
+
+.note-entry {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 0.5rem;
+}
+
+.note-date {
+  flex: 0 0 80px;
+  color: #888;
+  font-size: 0.9em;
+}
+
+.note-content {
+  flex: 1;
+}
+
+.note-title {
+  text-decoration: none;
+  color: #4a0e77;
+  margin-right: 0.5rem;
+}
+
+.note-title:hover {
+  text-decoration: underline;
+}
+
+.note-expand-btn {
+  background: none;
+  border: none;
+  color: #4a0e77;
+  cursor: pointer;
+  padding: 0;
+  margin-right: 0.5rem;
+}
+
+.note-expand-btn span[aria-hidden="true"] {
+  display: inline-block;
+  font-size: 1em;
+  transition: transform 0.3s ease;
+}
+
+.note-expand-btn[aria-expanded="false"] span[aria-hidden="true"] {
+  transform: rotate(0deg);
+}
+
+.note-expand-btn[aria-expanded="true"] span[aria-hidden="true"] {
+  transform: rotate(0deg);
+}
+
+.note-description {
+  margin-top: 0.5rem;
+  color: #666;
+  font-size: 0.9em;
+  overflow: hidden;
+  display: none;
+}
+
+.note-description.expanded {
+  display: block;
+}
+.hidden {
+  display: none;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+
+.year-heading {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: #333;
+}
+
+.year-entries {
+  margin-left: 1rem;
+}
+
+/* TOOLTIP */
+
 .tooltip-wrapper {
   position: relative;
   display: inline-block;
@@ -87,7 +175,6 @@ h3.date {
   text-decoration: underline;
 }
 
-/* Hover styles for non-touch devices */
 @media (hover: hover) and (pointer: fine) {
   .tooltip-wrapper:hover .tooltip-content {
     visibility: visible;
@@ -95,7 +182,6 @@ h3.date {
   }
 }
 
-/* Active class for touch devices */
 .tooltip-content.active {
   visibility: visible;
   opacity: 1;
@@ -111,7 +197,6 @@ footer {
 hr {
   border: 0;
   margin: 0;
-  /*above we reset the defaults, otherwise hr wouldn't show*/
   height: 1px;
   background-image: linear-gradient(to left, purple, white);
 }
@@ -142,27 +227,23 @@ blockquote p {
   display: flex;
   justify-content: flex-end;
   color: white;
-  /*make it look like a button with rectangular pill shape*/
   padding: 0.1em 0.4em;
   margin: 0.1em 0;
   border: 1px solid none;
   border-radius: 10px;
-  /*remove underlines*/
   text-decoration: none;
 }
 
 .site-nav a:hover {
   background: rgba(200, 180, 220, 0.5);
-  color: purple
+  color: purple;
 }
 
 .site-nav .logo {
   font-weight: bold;
   padding-left: 1%;
-  /*logo different colour*/
   color: purple;
   justify-content: flex-start;
-
 }
 
 .main-menu {
@@ -207,7 +288,6 @@ blockquote p {
 /* SMALL SCREENS / MOBILE */
 
 @media screen and (max-width: 600px) {
-
   .main-menu {
     display: none;
     flex-direction: column;
@@ -227,7 +307,6 @@ blockquote p {
     display: flex;
     transform: scaleY(1);
   }
-
 
   .menu-toggle {
     display: flex;
