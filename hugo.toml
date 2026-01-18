@@ -1,4 +1,4 @@
-baseURL = 'https://luischav.es/'
+baseURL = 'https://home.luischav.es/'
 languageCode = 'en-us'
 title = 'Luis Chaves Rodriguez'
 theme = 'hugo-and-luis'
